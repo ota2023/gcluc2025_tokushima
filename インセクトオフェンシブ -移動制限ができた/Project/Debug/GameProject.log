@@ -1,4 +1,17 @@
-﻿  Player.cpp
+﻿  CharaBase.cpp
+  DebugPrint.cpp
+D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Project\GameProject\DebugPrint.cpp(49,17): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  EnemyBase.cpp
+  EnemyManager.cpp
+  main.cpp
+D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Project\GameProject\main.cpp(102,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Project\GameProject\main.cpp(102,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  ObjectBase.cpp
+  Player.cpp
+  Slime.cpp
+  Task.cpp
+  TaskManager.cpp
+  コードを生成中...
 GLFW.lib(init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB '' が 'GLFW.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
@@ -15,7 +28,7 @@ GLFW.lib(wgl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(wgl_context.ob
 GLFW.lib(egl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(egl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
   glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
 LINK : warning LNK4075: /INCREMENTAL は /LTCG の指定によって無視されます。
-     ライブラリ C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -移動制限ができた\Project\/../Game/GameProject.lib とオブジェクト C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -移動制限ができた\Project\/../Game/GameProject.exp を作成中
+     ライブラリ D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Project\/../Game/GameProject.lib とオブジェクト D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Project\/../Game/GameProject.exp を作成中
 LINK : warning LNK4098: defaultlib 'LIBCMT' は他のライブラリの使用と競合しています。/NODEFAULTLIB:library を使用してください。
   コード生成しています。
   コード生成が終了しました。
@@ -124,4 +137,4 @@ LINK : warning LNK4286: シンボル 'alGetError' ('OpenAL32.lib(alError.obj)' �
 LINK : warning LNK4286: シンボル 'alGetError' ('OpenAL32.lib(alError.obj)' で定義) が 'alut.lib(alutBufferData.obj)' によってインポートされています
 LINK : warning LNK4286: シンボル 'alGenBuffers' ('OpenAL32.lib(alBuffer.obj)' で定義) が 'alut.lib(alutBufferData.obj)' によってインポートされています
 LINK : warning LNK4286: シンボル 'alBufferData' ('OpenAL32.lib(alBuffer.obj)' で定義) が 'alut.lib(alutBufferData.obj)' によってインポートされています
-  GameProject.vcxproj -> C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -移動制限ができた\Game\GameProject.exe
+  GameProject.vcxproj -> D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Game\GameProject.exe
