@@ -21,6 +21,8 @@ public:
 	// 描画処理
 	void Render() override;
 
+
+
 private:
 	// 状態
 	enum class EState
@@ -29,6 +31,9 @@ private:
 		Death,	// 死亡
 	};
 	void ChangeState(EState state);
+
+	bool UpdateMove();
+
 
 	// 待機時の更新処理
 	void StateIdle();
@@ -49,4 +54,6 @@ private:
 	static TexAnimData ANIM_DATA[];
 	CImage* mp_image;	// 画像
 	int m_type;			// スライムの種類
+
+
 };

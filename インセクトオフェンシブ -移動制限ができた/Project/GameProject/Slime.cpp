@@ -1,10 +1,11 @@
 #include "Slime.h"
 
-#define CHIP_SIZE 256		// 1コマのサイズ
-#define CENTER_POS CVector2D(128.0f, 184.0f)	// 中心座標
+#define CHIP_SIZE 479		// 1コマのサイズ
+#define CENTER_POS CVector2D(239.5f, 188.0f)	// 中心座標
+#define MOVE_SPEED_X 2.5f //　横方向の移動速度
 
 // スライムのアニメーションデータ
-TexAnimData Slime::ANIM_DATA[(int)EAnimType::Num] =
+/*TexAnimData Slime::ANIM_DATA[(int)EAnimType::Num] =
 {
 	{
 		new TexAnim[4]
@@ -22,7 +23,7 @@ TexAnimData Slime::ANIM_DATA[(int)EAnimType::Num] =
 		},
 		5
 	},
-};
+};*/
 
 // コンストラクタ
 Slime::Slime(int type, const CVector3D& pos)
@@ -32,20 +33,20 @@ Slime::Slime(int type, const CVector3D& pos)
 {
 	m_hp = 200;
 
-	// スライムの画像を読み込み
-	std::string imagePath;
-	if (m_type == 0) imagePath = "slime_a.png";
-	else if (m_type == 1) imagePath = "slime_b.png";
-	else if (m_type == 2) imagePath = "slime_c.png";
+	// 蜘蛛の画像を読み込み
+	std::string imagePath = "クモ＿移動＿01＿仮データ.png";
+	//if (m_type == 0) imagePath = "slime_a.png";
+	//else if (m_type == 1) imagePath = "slime_b.png";
+	//else if (m_type == 2) imagePath = "slime_c.png";
 	mp_image = CImage::CreateImage
 	(
 		imagePath.c_str(),	// 画像ファイルのパス
-		ANIM_DATA,			// アニメーションのデータ
+		nullptr,			// アニメーションのデータ
 		CHIP_SIZE, CHIP_SIZE		// 1コマの幅と高さ
 	);
 	mp_image->ChangeAnimation(0);
 	mp_image->SetCenter(CENTER_POS);
-	mp_image->SetFlipH(true);
+	mp_image->SetFlipH(false);
 }
 
 // デストラクタ
@@ -71,9 +72,22 @@ void Slime::ChangeState(EState state)
 	m_stateStep = 0;
 }
 
+// 移動処理の更新
+bool Slime::UpdateMove()
+{
+
+	m_pos.x -= MOVE_SPEED_X;
+	mp_image->SetFlipH(false);
+
+	bool isMove = true;
+
+	return isMove;
+}
+
 // 待機時の更新処理
 void Slime::StateIdle()
 {
+
 	// 待機アニメーションを再生
 	mp_image->ChangeAnimation((int)EAnimType::Idle);
 }
@@ -81,38 +95,45 @@ void Slime::StateIdle()
 // 死亡時の更新処理
 void Slime::StateDeath()
 {
+
 	// ステップごとに処理を切り替え
 	switch (m_stateStep)
 	{
 		// ステップ0：死亡アニメーションを再生
-		case 0:
-			mp_image->ChangeAnimation((int)EAnimType::Death, false);
-			m_stateStep++;
-			break;
+	case 0:
+		mp_image->ChangeAnimation((int)EAnimType::Death, false);
+		m_stateStep++;
+		break;
 		// ステップ1：アニメーション終了待ち
-		case 1:
-			// アニメーションが終了したら、削除
-			if (mp_image->CheckAnimationEnd())
-			{
-				// 削除フラグを立てる
-				Kill();
-			}
-			break;
+	case 1:
+		// アニメーションが終了したら、削除
+		if (mp_image->CheckAnimationEnd())
+		{
+			// 削除フラグを立てる
+			Kill();
+		}
+		break;
 	}
 }
 
 // 更新処理
 void Slime::Update()
+
 {
-	if (PUSH(CInput::eButton5))
+	/*if (PUSH(CInput::eButton5))
 	{
 		ChangeState(EState::Death);
-	}
+	}*/
+
 	// 状態に合わせて、更新処理を切り替える
 	switch (m_state)
 	{
 	case EState::Idle:	StateIdle();	break;
 	case EState::Death:	StateDeath();	break;
+	}
+
+	if (UpdateMove())
+	{
 	}
 
 	// イメージに座標を設定して、アニメーションを更新
