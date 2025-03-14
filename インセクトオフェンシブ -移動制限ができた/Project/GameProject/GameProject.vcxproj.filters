@@ -11,6 +11,7 @@
     <ClCompile Include="EnemyManager.cpp" />
     <ClCompile Include="Task.cpp" />
     <ClCompile Include="TaskManager.cpp" />
+    <ClCompile Include="Catp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Global.h" />
@@ -23,5 +24,6 @@
     <ClInclude Include="EnemyManager.h" />
     <ClInclude Include="Task.h" />
     <ClInclude Include="TaskManager.h" />
+    <ClInclude Include="Catp.h" />
   </ItemGroup>
 </Project>

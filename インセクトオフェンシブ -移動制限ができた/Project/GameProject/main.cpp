@@ -1,12 +1,14 @@
 #include "TaskManager.h"
 #include "Player.h"
 #include "Slime.h"
+#include "Catp.h"
 
 //--------------------------------------------
 //グローバル変数領域
 //--------------------------------------------
 Player* g_player = nullptr;	// プレイヤーのポインタ
 Slime* g_slime = nullptr;	// スライムのポインタ
+Catp* g_catp = nullptr;		//　ケムシのポインタ
 
 CImage* g_field = nullptr;	// フィールド画像のポインタ
 CImage* g_field2 = nullptr;	//	フィールド画像２のポインタ
@@ -78,6 +80,10 @@ void Init()
 	// スライムを生成
 	g_slime = new Slime(0,
 		CVector3D(SCREEN_WIDTH * 0.75f,0.0f, 0.0f));
+
+	//　ケムシを生成
+	g_catp = new Catp(0,
+		CVector3D(SCREEN_WIDTH * 0.75f, 0.0f, 0.0f));
 }
 
 

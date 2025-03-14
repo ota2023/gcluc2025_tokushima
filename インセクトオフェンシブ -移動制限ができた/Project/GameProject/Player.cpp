@@ -142,8 +142,8 @@ void Player::StateIdle()
 	EAnimType anim = isMove ? EAnimType::Move : EAnimType::Idle;
 	mp_image->ChangeAnimation((int)anim);
 
-	// [Z]キーでジャンプ状態へ移行
-	if (PUSH(CInput::eButton1))
+	// [SPACE]キーでジャンプ状態へ移行
+	if (PUSH(CInput::eButton5))
 	{
 		ChangeState(EState::Jump);
 	}

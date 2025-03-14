@@ -34,7 +34,7 @@ Slime::Slime(int type, const CVector3D& pos)
 	m_hp = 200;
 
 	// ’wå‚Ì‰æ‘œ‚ğ“Ç‚İ‚İ
-	std::string imagePath = "ƒNƒ‚QˆÚ“®Q01Q‰¼ƒf[ƒ^.png";
+	std::string imagePath = "ƒNƒ‚QˆÚ“®Q01Q–{”Ôƒf[ƒ^.png";
 	//if (m_type == 0) imagePath = "slime_a.png";
 	//else if (m_type == 1) imagePath = "slime_b.png";
 	//else if (m_type == 2) imagePath = "slime_c.png";

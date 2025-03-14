@@ -1,17 +1,4 @@
-﻿  CharaBase.cpp
-  DebugPrint.cpp
-D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Project\GameProject\DebugPrint.cpp(49,17): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  EnemyBase.cpp
-  EnemyManager.cpp
-  main.cpp
-D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Project\GameProject\main.cpp(102,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Project\GameProject\main.cpp(102,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-  ObjectBase.cpp
-  Player.cpp
-  Slime.cpp
-  Task.cpp
-  TaskManager.cpp
-  コードを生成中...
+﻿  Player.cpp
 GLFW.lib(init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB '' が 'GLFW.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
@@ -25,8 +12,8 @@ GLFW.lib(win32_window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_window.
 GLFW.lib(win32_tls.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_tls.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_joystick.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_joystick.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(wgl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(wgl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-GLFW.lib(egl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(egl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
   glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
+GLFW.lib(egl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(egl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 LINK : warning LNK4075: /INCREMENTAL は /LTCG の指定によって無視されます。
      ライブラリ D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Project\/../Game/GameProject.lib とオブジェクト D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Project\/../Game/GameProject.exp を作成中
 LINK : warning LNK4098: defaultlib 'LIBCMT' は他のライブラリの使用と競合しています。/NODEFAULTLIB:library を使用してください。
@@ -47,17 +34,17 @@ GLFW.lib(win32_joystick.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_joyst
 GLFW.lib(wgl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(wgl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(egl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(egl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLLibrary.lib(CVector.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CVector.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CImage.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CImage.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLLibrary.lib(CFont.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CFont.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLLibrary.lib(GL.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(GL.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLLibrary.lib(CResource.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CResource.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLLibrary.lib(CCamera.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CCamera.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLLibrary.lib(CSound.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CSound.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLLibrary.lib(CInput.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CInput.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-GLLibrary.lib(CImage.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CImage.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLLibrary.lib(CFPS.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CFPS.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLLibrary.lib(CLoadThread.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CLoadThread.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-GLLibrary.lib(CMatrix.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CMatrix.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLLibrary.lib(CRect.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CRect.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CMatrix.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CMatrix.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLLibrary.lib(CTexture.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CTexture.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLLibrary.lib(CCollision.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CCollision.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLLibrary.lib(CShader.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CShader.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
