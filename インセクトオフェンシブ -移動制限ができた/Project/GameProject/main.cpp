@@ -44,7 +44,7 @@ void Init()
 	//É{É^ÉìÇÃê›íË
 	CInput::Init();
 	CInput::SetButton(0, CInput::eButton1, 'Z');
-	CInput::SetButton(0, CInput::eButton2, 'X');
+	CInput::SetButton(0, CInput::eButton2, 'J');
 	CInput::SetButton(0, CInput::eButton3, 'C');
 	CInput::SetButton(0, CInput::eButton4, 'V');
 	CInput::SetButton(0, CInput::eButton5, VK_SPACE);

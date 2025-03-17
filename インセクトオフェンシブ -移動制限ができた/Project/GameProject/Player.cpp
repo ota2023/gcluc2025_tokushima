@@ -149,7 +149,7 @@ void Player::StateIdle()
 	{
 		ChangeState(EState::Jump);
 	}
-	// [X]キーで攻撃状態へ移行
+	// [J]キーで攻撃状態へ移行
 	else if (PUSH(CInput::eButton2))
 	{
 		ChangeState(EState::Attack);
