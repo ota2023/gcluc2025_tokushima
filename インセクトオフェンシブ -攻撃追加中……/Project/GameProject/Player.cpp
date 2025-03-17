@@ -240,7 +240,7 @@ bool Player::CheckCollisionPlayer(float _enemyShotX, float _enemyShotY,
 void Player::HitCheck(void)
 {
 	
-	CheckCollisionEnemy(m_pos.x, m_pos.y, m_pos.z, m_rect);
+	//CheckCollisionEnemy(m_pos.x, m_pos.y, m_pos.z, m_rect);
 }
 
 // XVˆ—

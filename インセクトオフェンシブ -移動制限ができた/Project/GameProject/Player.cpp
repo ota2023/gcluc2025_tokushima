@@ -1,7 +1,7 @@
 #include "Player.h"
 
-#define CHIP_WIDTH 650		// 1コマのサイズ
-#define CHIP_HEIGHT 350 
+#define CHIP_WIDTH 640		// 1コマのサイズ
+#define CHIP_HEIGHT 360 
 #define CENTER_POS CVector2D(CHIP_WIDTH/2, CHIP_HEIGHT/2)	// 中心座標
 #define MOVE_SPEED_X 5.0f	// 横方向の移動速度
 #define MOVE_SPEED_Z 3.0f	// 奥方向の移動速度
@@ -18,21 +18,21 @@ TexAnimData Player::ANIM_DATA[(int)EAnimType::Num] =
 {
 	// 待機アニメーション
 	{
-		new TexAnim[6]
+		new TexAnim[4]
 		{
-			{0, 6}, {1, 6}, {2, 6},
-			{3, 6}, {4, 6}, {5, 6},
+			{0, 10}, {1, 10}, {2, 10},
+			{3, 10},
 		},
-		6
+		4
 	},
 	// 移動アニメーション
 	{
-		new TexAnim[6]
+		new TexAnim[3]
 		{
-			{6, 6}, {7, 6}, {8, 6},
-			{9, 6}, {10, 6}, {11, 6},
+			{12, 6}, {13, 6}, {14, 6},
+
 		},
-		6
+		3
 	},
 	// 死亡アニメーション
 	{
@@ -48,12 +48,12 @@ TexAnimData Player::ANIM_DATA[(int)EAnimType::Num] =
 	{
 		new TexAnim[4]
 		{
-			{18, 6},
-			{19, 6},
-			{20, 6},
-			{21, 6},
+			{5, 6},
+			{6, 6},
+			{7, 6},
+			{8, 6},
 		},
-		3
+		4
 	},
 };
 
@@ -70,12 +70,14 @@ Player::Player(const CVector3D& pos)
 	// プレイヤーの画像を読み込み
 	mp_image = CImage::CreateImage
 	(
-		"カマキリ＿静止.png",	// 画像ファイルのパス
+		"カマキリ＿アニメーション.png",	// 画像ファイルのパス
 		ANIM_DATA,		// アニメーションのデータ
 		CHIP_WIDTH, CHIP_HEIGHT	// 1コマの幅と高さ
 	);
 	mp_image->ChangeAnimation((int)EAnimType::Idle);
 	mp_image->SetCenter(CENTER_POS);
+	mp_image->SetSize(CHIP_WIDTH * 0.7, CHIP_HEIGHT * 0.7);
+
 }
 
 // デストラクタ
@@ -243,4 +245,6 @@ void Player::Update()
 void Player::Render()
 {
 	mp_image->Draw();
+	RenderShadow();
+
 }

@@ -15,7 +15,7 @@ bool IsHitBox3D(float _cx, float _cy, float _cz, float _dx, float _dy, float _dz
     float bb = bt + _destRect.Height;
     float bback = bf + _destRect.Depth; // Zの終了位置
 
-    if (al < br && bl < ar &&   // X軸の範囲が重なっている
+    if (al < br && bl < ar &&       // X軸の範囲が重なっている
         at < bb && bt < ab &&       // Y軸の範囲が重なっている
         af < bback && bf < aback){  // Z軸の範囲が重なっている
         return true;

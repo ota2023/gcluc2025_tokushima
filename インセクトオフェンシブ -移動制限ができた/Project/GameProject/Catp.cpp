@@ -1,6 +1,7 @@
 #include "Catp.h"
 
-#define CHIP_SIZE 479		// 1コマのサイズ
+#define CHIP_WIDTH 479		// 1コマのサイズ
+#define CHIP_HEIGHT 376
 #define CENTER_POS CVector2D(239.5f, 380.0f)	// 中心座標
 #define MOVE_SPEED_X 1.5f //　横方向の移動速度
 
@@ -42,10 +43,11 @@ Catp::Catp(int type, const CVector3D& pos)
 	(
 		imagePath.c_str(),	// 画像ファイルのパス
 		nullptr,			// アニメーションのデータ
-		CHIP_SIZE, CHIP_SIZE		// 1コマの幅と高さ
+		CHIP_WIDTH, CHIP_HEIGHT		// 1コマの幅と高さ
 	);
 	mp_image->ChangeAnimation(0);
 	mp_image->SetCenter(CENTER_POS);
+	mp_image->SetSize(CHIP_WIDTH * 0.7, CHIP_HEIGHT * 0.7);
 	mp_image->SetFlipH(false);
 }
 
@@ -76,7 +78,7 @@ void Catp::ChangeState(EState state)
 bool Catp::UpdateMove()
 {
 
-	m_pos.x -= MOVE_SPEED_X;
+	//m_pos.x -= MOVE_SPEED_X;
 	mp_image->SetFlipH(false);
 
 	bool isMove = true;
@@ -145,4 +147,6 @@ void Catp::Update()
 void Catp::Render()
 {
 	mp_image->Draw();
+	//RenderShadow();
+
 }

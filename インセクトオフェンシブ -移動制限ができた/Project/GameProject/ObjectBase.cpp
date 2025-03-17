@@ -14,8 +14,8 @@ ObjectBase::ObjectBase(const CVector3D& pos)
 	, mp_shadowImg(nullptr)
 {
 	// 影の画像を読み込み
-	mp_shadowImg = CImage::CreateImage("shadow.png");
-	mp_shadowImg->SetCenter(mp_shadowImg->GetSize() * 0.5f);
+	mp_shadowImg = CImage::CreateImage("影.png");
+	mp_shadowImg->SetCenter(mp_shadowImg->GetSize() * 0.75f);
 }
 
 // デストラクタ
