@@ -2,6 +2,7 @@
 #include "Player.h"
 #include "Slime.h"
 #include "Catp.h"
+#include "Bee.h"
 
 //--------------------------------------------
 //グローバル変数領域
@@ -9,6 +10,7 @@
 Player* g_player = nullptr;	// プレイヤーのポインタ
 Slime* g_slime = nullptr;	// スライムのポインタ
 Catp* g_catp = nullptr;		//　ケムシのポインタ
+Bee* g_bee = nullptr;		//　ハチのポインタ
 
 CImage* g_field = nullptr;	// フィールド画像のポインタ
 CImage* g_field2 = nullptr;	//	フィールド画像２のポインタ
@@ -84,6 +86,10 @@ void Init()
 	//　ケムシを生成
 	g_catp = new Catp(0,
 		CVector3D(SCREEN_WIDTH * 0.75f, 0.0f, 0.0f));
+
+	//　ハチを生成
+	g_bee = new Bee(0,
+		CVector3D(SCREEN_WIDTH * 0.75f, 125.0f, 0.0f));
 }
 
 

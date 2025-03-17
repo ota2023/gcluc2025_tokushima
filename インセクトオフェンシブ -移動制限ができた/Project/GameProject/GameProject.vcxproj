@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bee.cpp" />
     <ClCompile Include="Catp.cpp" />
     <ClCompile Include="CharaBase.cpp" />
     <ClCompile Include="DebugPrint.cpp" />
@@ -24,6 +25,7 @@
     <ClCompile Include="TaskManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bee.h" />
     <ClInclude Include="Catp.h" />
     <ClInclude Include="CharaBase.h" />
     <ClInclude Include="DebugPrint.h" />
