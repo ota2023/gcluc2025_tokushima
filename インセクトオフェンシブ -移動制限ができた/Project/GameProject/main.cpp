@@ -2,6 +2,7 @@
 #include "Player.h"
 #include "Slime.h"
 #include "Catp.h"
+#include "Bee.h"
 
 //--------------------------------------------
 //グローバル変数領域
@@ -9,6 +10,7 @@
 Player* g_player = nullptr;	// プレイヤーのポインタ
 Slime* g_slime = nullptr;	// スライムのポインタ
 Catp* g_catp = nullptr;		//　ケムシのポインタ
+Bee* g_bee = nullptr;		//　ハチのポインタ
 
 CImage* g_field = nullptr;	// フィールド画像のポインタ
 CImage* g_field2 = nullptr;	//	フィールド画像２のポインタ
@@ -44,15 +46,15 @@ void Init()
 	//ボタンの設定
 	CInput::Init();
 	CInput::SetButton(0, CInput::eButton1, 'Z');
-	CInput::SetButton(0, CInput::eButton2, 'X');
+	CInput::SetButton(0, CInput::eButton2, 'J');
 	CInput::SetButton(0, CInput::eButton3, 'C');
 	CInput::SetButton(0, CInput::eButton4, 'V');
 	CInput::SetButton(0, CInput::eButton5, VK_SPACE);
 	CInput::SetButton(0, CInput::eButton10, VK_RETURN);
-	CInput::SetButton(0, CInput::eUp, VK_UP);
-	CInput::SetButton(0, CInput::eDown, VK_DOWN);
-	CInput::SetButton(0, CInput::eLeft, VK_LEFT);
-	CInput::SetButton(0, CInput::eRight, VK_RIGHT);
+	CInput::SetButton(0, CInput::eUp, 'W');
+	CInput::SetButton(0, CInput::eDown, 'S');
+	CInput::SetButton(0, CInput::eLeft, 'A');
+	CInput::SetButton(0, CInput::eRight, 'D');
 	CInput::SetButton(0, CInput::eMouseL, VK_LBUTTON);
 	CInput::SetButton(0, CInput::eMouseR, VK_RBUTTON);
 	CInput::SetButton(0, CInput::eMouseC, VK_MBUTTON);
@@ -84,6 +86,10 @@ void Init()
 	//　ケムシを生成
 	g_catp = new Catp(0,
 		CVector3D(SCREEN_WIDTH * 0.75f, 0.0f, 0.0f));
+
+	//　ハチを生成
+	g_bee = new Bee(0,
+		CVector3D(SCREEN_WIDTH * 0.75f, 125.0f, 0.0f));
 }
 
 
