@@ -3,9 +3,9 @@
 #define CHIP_WIDTH 640		// 1コマのサイズ
 #define CHIP_HEIGHT 360 
 #define CENTER_POS CVector2D(CHIP_WIDTH/2, CHIP_HEIGHT/2)	// 中心座標
-#define MOVE_SPEED_X 5.0f	// 横方向の移動速度
-#define MOVE_SPEED_Z 3.0f	// 奥方向の移動速度
-#define JUMP_SPEED 15.0f	// ジャンプ速度
+#define MOVE_SPEED_X 7.0f	// 横方向の移動速度
+#define MOVE_SPEED_Z 4.0f	// 奥方向の移動速度
+#define JUMP_SPEED 25.0f	// ジャンプ速度
 #define GRAVITY -1.0f		// 重力
 #define LEFT_UPPER_LIMIT 0.0f	//左移動制限(割合)
 #define RIGHT_UPPER_LIMIT 3.0f	//右移動制限(割合)

@@ -2,7 +2,7 @@
 
 #define CHIP_WIDTH 479		// 1コマのサイズ
 #define CHIP_HEIGHT 376
-#define CENTER_POS CVector2D(239.5f, 380.0f)	// 中心座標
+#define CENTER_POS CVector2D(CHIP_WIDTH / 2, CHIP_HEIGHT / 2)	// 中心座標
 #define MOVE_SPEED_X 1.5f //　横方向の移動速度
 
 // スライムのアニメーションデータ
@@ -147,6 +147,6 @@ void Catp::Update()
 void Catp::Render()
 {
 	mp_image->Draw();
-	//RenderShadow();
+	RenderShadow();
 
 }

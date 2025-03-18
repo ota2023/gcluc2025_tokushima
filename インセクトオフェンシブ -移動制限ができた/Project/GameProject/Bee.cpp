@@ -155,6 +155,6 @@ void Bee::Update()
 void Bee::Render()
 {
 	mp_image->Draw();
-	//RenderShadow();
+	RenderShadow();
 
 }

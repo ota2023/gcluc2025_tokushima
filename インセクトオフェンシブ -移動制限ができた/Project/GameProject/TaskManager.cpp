@@ -141,6 +141,7 @@ void TaskManager::DeleteKilledTask()
 	}
 }
 
+
 //リストに登録されているタスク
 void TaskManager::Update()
 {

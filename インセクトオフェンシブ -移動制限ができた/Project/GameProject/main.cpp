@@ -80,8 +80,8 @@ void Init()
 		CVector3D(SCREEN_WIDTH * 0.5f, 0.0f, 0.0f));
 
 	// スライムを生成
-	g_slime = new Slime(0,
-		CVector3D(SCREEN_WIDTH * 0.75f,0.0f, 0.0f));
+	//g_slime = new Slime(0,
+		//CVector3D(SCREEN_WIDTH * 0.75f,0.0f, 0.0f));
 
 	//　ケムシを生成
 	g_catp = new Catp(0,
@@ -89,7 +89,7 @@ void Init()
 
 	//　ハチを生成
 	g_bee = new Bee(0,
-		CVector3D(SCREEN_WIDTH * 0.75f, 125.0f, 0.0f));
+		CVector3D(SCREEN_WIDTH * 0.75f, 250.0f, -100.0f));
 }
 
 

@@ -57,5 +57,6 @@ private:
 	bool m_isKill;		//削除フラグ
 	int m_prio;			//タスクの優先度
 	int m_sortOrder;	//同じ優先度内での順番
+	ETaskPrio m_taskPrio;
 	
 };
