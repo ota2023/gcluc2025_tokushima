@@ -10,6 +10,8 @@ public:
 	// デストラクタ
 	~Player();
 
+	CVector3D GetPlyPos();
+
 	// 更新処理
 	void Update() override;
 	// 描画処理

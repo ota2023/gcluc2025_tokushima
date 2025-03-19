@@ -67,6 +67,7 @@ Player::Player(const CVector3D& pos)
 	, mp_image(nullptr)
 	, m_id(CAST::PLAYER)
 {
+	m_pos = m_pos;
 	m_hp = 100;
 
 	// プレイヤーの画像を読み込み
@@ -87,6 +88,11 @@ Player::~Player()
 {
 	// 画像データを削除
 	delete mp_image;
+}
+
+CVector3D Player::GetPlyPos()
+{
+	return m_pos;
 }
 
 // 現在の状態を切り替え

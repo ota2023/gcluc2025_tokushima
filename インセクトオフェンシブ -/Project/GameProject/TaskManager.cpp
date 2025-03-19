@@ -143,7 +143,7 @@ void TaskManager::DeleteKilledTask()
 
 //指定したグループ(id)を持ち、指定した番号のタスクを返す
 //同じグループ(id)のものが複数いる場合は、number=0から付番されている
-void* TaskManager::GetTask(CAST _id, DWORD _number) {
+Task* TaskManager::GetTask(CAST _id, DWORD _number) {
 	int count = 0;
 	for (Task* task : m_taskList) {
 		if (task->m_id == _id 

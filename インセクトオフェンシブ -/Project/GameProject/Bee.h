@@ -22,7 +22,7 @@ public:
 	// •`‰æˆ—
 	void Render() override;
 
-
+	CAST m_id;
 
 private:
 	// ó‘Ô
