@@ -1,10 +1,7 @@
-﻿  main.cpp
-D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Project\GameProject\main.cpp(114,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Project\GameProject\main.cpp(114,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-  ObjectBase.cpp
-  Player.cpp
-D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Project\GameProject\Player.cpp(79,50): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-  コードを生成中...
+﻿  Bee.cpp
+D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Project\GameProject\Bee.cpp(53,50): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Project\GameProject\Bee.cpp(53,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -移動制限ができた\Project\GameProject\Bee.cpp(159,56): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
 GLFW.lib(init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB '' が 'GLFW.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。

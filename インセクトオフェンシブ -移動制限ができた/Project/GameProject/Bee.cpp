@@ -155,6 +155,8 @@ void Bee::Update()
 void Bee::Render()
 {
 	mp_image->Draw();
+	mp_shadowImg->SetSize(CHIP_WIDTH * 0.5, CHIP_HEIGHT * 0.5);
+	mp_shadowImg->SetCenter(CHIP_WIDTH * 0.5, CHIP_HEIGHT * 0.35 );
 	RenderShadow();
 
 }
