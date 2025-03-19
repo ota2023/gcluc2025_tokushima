@@ -83,7 +83,7 @@ bool Bee::UpdateMove()
 {
 	Player* ptask = (Player*)TaskManager::
 			Instance()->GetTask(CAST::PLAYER);
-	ptask->GetPlyPos();
+	//ptask->GetPlyPos();
 
 
 	mp_image->SetFlipH(false);

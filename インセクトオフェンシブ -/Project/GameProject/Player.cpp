@@ -8,10 +8,10 @@
 #define MOVE_SPEED_Z 4.0f	// 奥方向の移動速度
 #define JUMP_SPEED 25.0f	// ジャンプ速度
 #define GRAVITY -1.0f		// 重力
-#define LEFT_UPPER_LIMIT 0.0f	//左移動制限(割合)
+#define LEFT_UPPER_LIMIT 240.0f	//左移動制限(割合)
 #define RIGHT_UPPER_LIMIT 3.0f	//右移動制限(割合)
 #define UPPER_LIMIT 5.0f	//上移動制限(割合)
-#define LOWER_LIMIT 3.0f	//下移動制限(割合)
+#define LOWER_LIMIT 1.0f	//下移動制限(割合)
 
 
 // プレイヤーのアニメーションデータの前宣言
