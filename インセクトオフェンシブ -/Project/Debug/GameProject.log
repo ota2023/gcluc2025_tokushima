@@ -1,0 +1,23 @@
+﻿  Bee.cpp
+C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -進行プロジェクト\Project\GameProject\Bee.cpp(53,50): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -進行プロジェクト\Project\GameProject\Bee.cpp(53,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -進行プロジェクト\Project\GameProject\Bee.cpp(83,27): error C3861: 'GetTask': 識別子が見つかりませんでした
+C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -進行プロジェクト\Project\GameProject\Bee.cpp(160,56): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+  Catp.cpp
+C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -進行プロジェクト\Project\GameProject\Catp.cpp(50,50): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -進行プロジェクト\Project\GameProject\Catp.cpp(50,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+  CharaBase.cpp
+  EnemyBase.cpp
+  EnemyManager.cpp
+  main.cpp
+C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -進行プロジェクト\Project\GameProject\main.cpp(114,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -進行プロジェクト\Project\GameProject\main.cpp(114,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  ObjectBase.cpp
+  Player.cpp
+C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -進行プロジェクト\Project\GameProject\Player.cpp(81,50): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+  Slime.cpp
+C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -進行プロジェクト\Project\GameProject\Slime.cpp(51,50): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -進行プロジェクト\Project\GameProject\Slime.cpp(51,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+  Task.cpp
+  TaskManager.cpp
+  コードを生成中...
