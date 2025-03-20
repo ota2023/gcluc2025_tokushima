@@ -73,7 +73,7 @@ void Init()
 
 	// フィールドの画像を生成
 	//g_field = CImage::CreateImage("壁＿本番データ.png");
-	g_field2 = CImage::CreateImage("床＿本番データ.png");
+	g_field2 = CImage::CreateImage("背景まとめ.png");
 
 	// プレイヤーを生成
 	g_player = new Player(
