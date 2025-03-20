@@ -56,6 +56,17 @@ TexAnimData Player::ANIM_DATA[(int)EAnimType::Num] =
 		},
 		4
 	},
+
+	// ジャンプアニメーション
+	{
+		new TexAnim[3]
+		{
+			{8, 6},
+			{9, 6},
+			{10,6}
+		},
+		3
+	},
 };
 
 
@@ -193,7 +204,7 @@ void Player::StateJump()
 
 	// 移動処理
 	bool isMove = UpdateMove();
-	mp_image->ChangeAnimation((int)EAnimType::Idle);
+	mp_image->ChangeAnimation((int)EAnimType::Jump);
 }
 
 // 攻撃中の更新処理
