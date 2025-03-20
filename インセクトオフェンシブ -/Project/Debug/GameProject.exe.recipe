@@ -2,7 +2,11 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+<<<<<<< HEAD
       <FullPath>D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -\Game\GameProject.exe</FullPath>
+=======
+      <FullPath>D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -\Game\GameProject.exe</FullPath>
+>>>>>>> ee0629f83a567a664bea942d8e1b72ce162c29f6
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
