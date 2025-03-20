@@ -16,6 +16,10 @@ public:
 	// 敵をリストから取り除く
 	void Remove(EnemyBase* enemy);
 
+	//文字描画
+	void Print();
+
+
 private:
 	// コンストラクタ
 	EnemyManager();

@@ -41,6 +41,7 @@ void ObjectBase::SetPos(const CVector3D& pos)
 	m_pos = pos;
 }
 
+
 // 3ŸŒ³À•W‚©‚ç2ŸŒ³À•W‚ğŒvZ
 CVector2D ObjectBase::CalcScreenPos(bool grounded) const
 {

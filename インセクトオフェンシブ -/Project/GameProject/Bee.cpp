@@ -2,22 +2,20 @@
 
 
 
-
 #define CHIP_WIDTH 479		// 1コマのサイズ
 #define CHIP_HEIGHT 376
 #define CENTER_POS CVector2D(CHIP_WIDTH/2, CHIP_HEIGHT/2)	// 中心座標
-#define MOVE_SPEED_X 1.5f //　横方向の移動速度
+#define move_Speed_X 3.0f //　横方向の移動速度
 
 // スライムのアニメーションデータ
-/*TexAnimData Slime::ANIM_DATA[(int)EAnimType::Num] =
+TexAnimData Bee::ANIM_DATA[(int)EAnimType::Num] =
 {
 	{
-		new TexAnim[4]
+		new TexAnim[2]
 		{
 			{ 0, 6}, { 1, 6},
-			{ 2, 6}, { 3, 6},
 		},
-		4
+		2
 	},
 	{
 		new TexAnim[5]
@@ -27,29 +25,27 @@
 		},
 		5
 	},
-};*/
+};
 
 // コンストラクタ
 Bee::Bee(int type, const CVector3D& pos)
-	: EnemyBase(pos,CAST::ENEMY)
+	: EnemyBase(pos,CAST::BEE)
 	, mp_image(nullptr)
 	, m_type(type)
-	//, m_id(CAST::ENEMY)
 {
 	m_hp = 200;
+	m_rect.TopX = CHIP_WIDTH / 4; m_rect.TopY = CHIP_HEIGHT / 3;
+	m_rect.TopZ = -10; m_rect.Width = CHIP_WIDTH / 2.5;
+	m_rect.Height = CHIP_HEIGHT / 5; m_rect.Depth = 20;
 
-	// 毛虫の画像を読み込み
-	std::string imagePath = "ハチ＿02＿本番データ.png";
-	//if (m_type == 0) imagePath = "slime_a.png";
-	//else if (m_type == 1) imagePath = "slime_b.png";
-	//else if (m_type == 2) imagePath = "slime_c.png";
+	// ハチの画像を読み込み
 	mp_image = CImage::CreateImage
 	(
-		imagePath.c_str(),	// 画像ファイルのパス
-		nullptr,			// アニメーションのデータ
-		CHIP_WIDTH, CHIP_HEIGHT		// 1コマの幅と高さ
+		"ハチ＿01＿本番データ.png",	// 画像ファイルのパス
+		ANIM_DATA,		// アニメーションのデータ
+		CHIP_WIDTH, CHIP_HEIGHT	// 1コマの幅と高さ
 	);
-	mp_image->ChangeAnimation(0);
+	mp_image->ChangeAnimation((int)EAnimType::Idle);
 	mp_image->SetCenter(CENTER_POS);
 	mp_image->SetSize(CHIP_WIDTH * 0.7, CHIP_HEIGHT * 0.7);
 	mp_image->SetFlipH(false);
@@ -69,6 +65,40 @@ void Bee::Death()
 	ChangeState(EState::Death);
 }
 
+void Bee::Damage(int damage)
+{
+	m_hp = max(m_hp - damage, 0);
+
+	if (m_hp <= 0) {
+		//死亡処理
+		Death();
+	}
+}
+
+bool Bee::CheckCollisionEnemy(float _playerShotX, float _playerShotY, float _playerShotZ, SRect3D _playerShotRect)
+{
+	if (IsHitBox3D(_playerShotX, _playerShotY, _playerShotZ, m_pos.x, m_pos.y,
+		m_pos.z, _playerShotRect, m_rect))
+	{
+		//printf("ハチにダメージ！\n");
+		Death();
+		//Damage(1);	//1は暫定値
+		return true;
+	}
+	return false;
+}
+
+void Bee::HitCheck(void)
+{
+	Player* ptask = (Player*)TaskManager::
+		Instance()->GetTask(CAST::PLAYER);
+	if (!ptask)return;
+
+	if(ptask->CheckCollisionPlayer(
+			m_pos.x, m_pos.y, m_pos.z, m_rect));
+
+}
+
 // 現在の状態を切り替え
 void Bee::ChangeState(EState state)
 {
@@ -81,7 +111,7 @@ void Bee::ChangeState(EState state)
 // 移動処理の更新
 bool Bee::UpdateMove()
 {
-	m_pos.x -= MOVE_SPEED_X;
+	m_pos.x -= move_Speed_X;
 
 	Player* ptask = (Player*)TaskManager::
 			Instance()->GetTask(CAST::PLAYER);
@@ -131,9 +161,12 @@ void Bee::StateDeath()
 void Bee::Update()
 
 {
-	/*if (PUSH(CInput::eButton5))
+	/*
+	if (m_timer++ >= 1800)
 	{
+		m_timer = 0;
 		ChangeState(EState::Death);
+		//printf("ハチ消えたお\n");
 	}*/
 
 
@@ -150,17 +183,22 @@ void Bee::Update()
 	{
 	}
 
+	HitCheck();
+
 	// イメージに座標を設定して、アニメーションを更新
 	mp_image->SetPos(CalcScreenPos());
 	mp_image->UpdateAnimation();
+
+
 }
 
 // 描画処理
 void Bee::Render()
 {
+	RenderShadow();
+
 	mp_image->Draw();
 	mp_shadowImg->SetSize(CHIP_WIDTH * 0.5, CHIP_HEIGHT * 0.5);
 	mp_shadowImg->SetCenter(CHIP_WIDTH * 0.5, CHIP_HEIGHT * 0.35);
-	RenderShadow();
 
 }

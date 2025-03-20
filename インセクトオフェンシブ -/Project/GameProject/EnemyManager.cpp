@@ -1,5 +1,6 @@
 #include "EnemyManager.h"
 #include "EnemyBase.h"
+#include "Player.h"
 
 EnemyManager* EnemyManager::sp_instance = nullptr;
 
@@ -34,6 +35,16 @@ void EnemyManager::Remove(EnemyBase* enemy)
 {
 	m_enemyList.remove(enemy);
 }
+
+void EnemyManager::Print()
+{
+	printf("ﾆﾌﾞ\n");
+
+}
+
+
+
+
 
 // コンストラクタ
 EnemyManager::EnemyManager()

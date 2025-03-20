@@ -13,6 +13,8 @@
     <ClCompile Include="TaskManager.cpp" />
     <ClCompile Include="Catp.cpp" />
     <ClCompile Include="Bee.cpp" />
+    <ClCompile Include="CollisionCheck.cpp" />
+    <ClCompile Include="PlayerAttack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Global.h" />
@@ -27,5 +29,7 @@
     <ClInclude Include="TaskManager.h" />
     <ClInclude Include="Catp.h" />
     <ClInclude Include="Bee.h" />
+    <ClInclude Include="CollisionCheck.h" />
+    <ClInclude Include="PlayerAttack.h" />
   </ItemGroup>
 </Project>

@@ -3,7 +3,7 @@
 #define CHIP_WIDTH 479		// 1コマのサイズ
 #define CHIP_HEIGHT  376
 #define CENTER_POS CVector2D(239.5f, 188.0f)	// 中心座標
-#define MOVE_SPEED_X 2.5f //　横方向の移動速度
+#define move_Speed_X 2.5f //　横方向の移動速度
 
 // スライムのアニメーションデータ
 /*TexAnimData Slime::ANIM_DATA[(int)EAnimType::Num] =
@@ -28,7 +28,7 @@
 
 // コンストラクタ
 Slime::Slime(int type, const CVector3D& pos)
-	: EnemyBase(pos,CAST::ENEMY)
+	: EnemyBase(pos,CAST::SPIDER)
 	, mp_image(nullptr)
 	, m_type(type)
 {
@@ -79,7 +79,7 @@ void Slime::ChangeState(EState state)
 bool Slime::UpdateMove()
 {
 
-	//m_pos.x -= MOVE_SPEED_X;
+	//m_pos.x -= move_Speed_X;
 	mp_image->SetFlipH(false);
 
 	bool isMove = true;

@@ -27,6 +27,9 @@ public:	//シングルトン(気になる人は調べてみて)
 	//指定したidを持ち、指定した番号のタスクを返す
 	Task* GetTask(CAST _id, DWORD _number = 0);
 
+	//指定したグループの(id)のタスク数を返す
+	DWORD GetCount(CAST _id);
+	
 	//リストに登録されているタスクを更新
 	void Update();
 	//リストに登録されているタスクを描画

@@ -3,6 +3,7 @@
 #include "Slime.h"
 #include "Catp.h"
 #include "Bee.h"
+#include "EnemyManager.h"
 
 //--------------------------------------------
 //グローバル変数領域
@@ -84,11 +85,46 @@ void Init()
 
 	//　ケムシを生成
 	g_catp = new Catp(0,
-		CVector3D(SCREEN_WIDTH * 0.75f, 0.0f, 0.0f));
+		CVector3D(SCREEN_WIDTH * 1.3f, 0.0f, 0.0f));
+	//　ケムシを生成
+	g_catp = new Catp(0,
+		CVector3D(SCREEN_WIDTH * 1.7f, 0.0f, -200.0f));
+	//　ケムシを生成
+	g_catp = new Catp(0,
+		CVector3D(SCREEN_WIDTH * 1.9f, 0.0f,150.0f));
+	//　ケムシを生成
+	g_catp = new Catp(0,
+		CVector3D(SCREEN_WIDTH * 2.2f, 0.0f, 50.0f));
+	//　ケムシを生成
+	g_catp = new Catp(0,
+		CVector3D(SCREEN_WIDTH * 2.4f, 0.0f, -200.0f));
+	//　ケムシを生成
+	g_catp = new Catp(0,
+		CVector3D(SCREEN_WIDTH * 2.4f, 0.0f, 0.0f));
+	//　ケムシを生成
+	g_catp = new Catp(0,
+		CVector3D(SCREEN_WIDTH * 2.4f, 0.0f, 150.0f));
 
 	//　ハチを生成
 	g_bee = new Bee(0,
-		CVector3D(SCREEN_WIDTH * 0.75f, 250.0f, -100.0f));
+		CVector3D(SCREEN_WIDTH * 1.3f, 250.0f, -100.0f));
+	//　ハチを生成
+	g_bee = new Bee(0,
+		CVector3D(SCREEN_WIDTH * 2.0f, 50.0f, -100.0f));
+	//　ハチを生成
+	g_bee = new Bee(0,
+		CVector3D(SCREEN_WIDTH * 2.5f, 50.0f, -100.0f));
+	//　ハチを生成
+	g_bee = new Bee(0,
+		CVector3D(SCREEN_WIDTH * 2.8f, 250.0f, -100.0f));
+	//　ハチを生成
+	g_bee = new Bee(0,
+		CVector3D(SCREEN_WIDTH * 3.5f, 50.0f, -100.0f));
+	//　ハチを生成
+	g_bee = new Bee(0,
+		CVector3D(SCREEN_WIDTH * 4.0f, 50.0f, -100.0f));
+
+
 }
 
 

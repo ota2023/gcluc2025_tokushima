@@ -12,7 +12,8 @@ enum class ETaskPrio
 };
 
 enum class CAST {
-	PLAYER,ENEMY,NONE
+	PLAYER,ATTACK,ENEMY, CATP,BEE, SPIDER,NONE
+	
 };
 
 class Task

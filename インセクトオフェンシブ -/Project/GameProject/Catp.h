@@ -1,5 +1,6 @@
 #pragma once
 #include "EnemyBase.h"
+#include "Player.h"
 
 class Catp : public EnemyBase
 {
@@ -15,6 +16,15 @@ public:
 
 	// 死亡処理
 	virtual void Death() override;
+
+	//ダメージ処理
+	void Damage(int damage);
+
+	//敵の当たり判定
+	bool CheckCollisionEnemy(float _playerShotX, float _playerShotY,
+		float _playerShotZ, SRect3D _playerShotRect);
+
+	void HitCheck(void);
 
 	// 更新処理
 	void Update() override;
@@ -55,5 +65,7 @@ private:
 	CImage* mp_image;	// 画像
 	int m_type;			// スライムの種類
 
+
+	int i = 0;
 
 };

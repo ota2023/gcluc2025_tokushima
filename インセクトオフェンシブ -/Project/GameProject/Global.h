@@ -2,6 +2,7 @@
 
 #include <GLLibrary.h>
 #include "DebugPrint.h"
+
 //‰æ–Ê•
 #define SCREEN_WIDTH 1920
 //‰æ–Ê‚‚³

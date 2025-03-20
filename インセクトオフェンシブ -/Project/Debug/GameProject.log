@@ -1,50 +1,6 @@
-﻿  Bee.cpp
-<<<<<<< HEAD
-D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\Bee.cpp(54,50): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\Bee.cpp(54,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\Bee.cpp(163,56): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-  Catp.cpp
-D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\Catp.cpp(50,50): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\Catp.cpp(50,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-  CharaBase.cpp
-  DebugPrint.cpp
-D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\DebugPrint.cpp(49,17): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  EnemyBase.cpp
-  EnemyManager.cpp
-  ObjectBase.cpp
-  Player.cpp
-D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\Player.cpp(91,50): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-  Slime.cpp
-D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\Slime.cpp(51,50): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\Slime.cpp(51,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-=======
-D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\Bee.cpp(54,50): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\Bee.cpp(54,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\Bee.cpp(163,56): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-  Catp.cpp
-D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\Catp.cpp(50,50): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\Catp.cpp(50,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-  CharaBase.cpp
-  DebugPrint.cpp
-D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\DebugPrint.cpp(49,17): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  EnemyBase.cpp
-  EnemyManager.cpp
-  main.cpp
-D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\main.cpp(113,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\main.cpp(113,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-  ObjectBase.cpp
-  Player.cpp
-D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\Player.cpp(91,50): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-  Slime.cpp
-D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\Slime.cpp(51,50): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\Slime.cpp(51,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
->>>>>>> b5a2ee14ad8123b5c7b10beddea18fe347beffef
-  Task.cpp
-  TaskManager.cpp
-  main.cpp
-D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\main.cpp(113,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -\Project\GameProject\main.cpp(113,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-  コードを生成中...
+﻿  main.cpp
+C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -\Project\GameProject\main.cpp(149,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -\Project\GameProject\main.cpp(149,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
 GLFW.lib(init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB '' が 'GLFW.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
@@ -56,16 +12,12 @@ GLFW.lib(monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(monitor.obj)' で�
 GLFW.lib(vulkan.obj) : warning LNK4099: PDB '' が 'GLFW.lib(vulkan.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_tls.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_tls.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
 GLFW.lib(win32_joystick.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_joystick.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(wgl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(wgl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(egl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(egl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
 LINK : warning LNK4075: /INCREMENTAL は /LTCG の指定によって無視されます。
-<<<<<<< HEAD
-     ライブラリ D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -\Project\/../Game/GameProject.lib とオブジェクト D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -\Project\/../Game/GameProject.exp を作成中
-=======
-     ライブラリ D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -\Project\/../Game/GameProject.lib とオブジェクト D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -\Project\/../Game/GameProject.exp を作成中
->>>>>>> b5a2ee14ad8123b5c7b10beddea18fe347beffef
+     ライブラリ C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -\Project\/../Game/GameProject.lib とオブジェクト C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -\Project\/../Game/GameProject.exp を作成中
 LINK : warning LNK4098: defaultlib 'LIBCMT' は他のライブラリの使用と競合しています。/NODEFAULTLIB:library を使用してください。
   コード生成しています。
   コード生成が終了しました。
@@ -174,8 +126,4 @@ LINK : warning LNK4286: シンボル 'alGetError' ('OpenAL32.lib(alError.obj)' �
 LINK : warning LNK4286: シンボル 'alGetError' ('OpenAL32.lib(alError.obj)' で定義) が 'alut.lib(alutBufferData.obj)' によってインポートされています
 LINK : warning LNK4286: シンボル 'alGenBuffers' ('OpenAL32.lib(alBuffer.obj)' で定義) が 'alut.lib(alutBufferData.obj)' によってインポートされています
 LINK : warning LNK4286: シンボル 'alBufferData' ('OpenAL32.lib(alBuffer.obj)' で定義) が 'alut.lib(alutBufferData.obj)' によってインポートされています
-<<<<<<< HEAD
-  GameProject.vcxproj -> D:\gcluc2025_tokushima\gcluc2025_tokushima\インセクトオフェンシブ -\Game\GameProject.exe
-=======
-  GameProject.vcxproj -> D:\gcluc2025\gcluc2025_tokushima\インセクトオフェンシブ -\Game\GameProject.exe
->>>>>>> b5a2ee14ad8123b5c7b10beddea18fe347beffef
+  GameProject.vcxproj -> C:\Users\numa0\OneDrive\デスクトップ\ゲームキャンプ\インセクトオフェンシブ -\Game\GameProject.exe

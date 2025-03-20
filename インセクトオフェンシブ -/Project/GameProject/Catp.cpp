@@ -3,7 +3,8 @@
 #define CHIP_WIDTH 479		// 1コマのサイズ
 #define CHIP_HEIGHT 376
 #define CENTER_POS CVector2D(CHIP_WIDTH / 2, CHIP_HEIGHT / 2)	// 中心座標
-#define MOVE_SPEED_X 1.5f //　横方向の移動速度
+#define move_Speed_X 1.5f //　横方向の移動速度
+
 
 // スライムのアニメーションデータ
 /*TexAnimData Slime::ANIM_DATA[(int)EAnimType::Num] =
@@ -28,11 +29,14 @@
 
 // コンストラクタ
 Catp::Catp(int type, const CVector3D& pos)
-	: EnemyBase(pos,CAST::ENEMY)
+	: EnemyBase(pos,CAST::CATP)
 	, mp_image(nullptr)
 	, m_type(type)
 {
 	m_hp = 200;
+	m_rect.TopX = CHIP_WIDTH / 4; m_rect.TopY = CHIP_HEIGHT / 4;
+	m_rect.TopZ = -40; m_rect.Width = CHIP_WIDTH / 2;
+	m_rect.Height = CHIP_HEIGHT / 2; m_rect.Depth = 80;
 
 	// 毛虫の画像を読み込み
 	std::string imagePath = "毛虫＿本番データ.png";
@@ -65,6 +69,42 @@ void Catp::Death()
 	ChangeState(EState::Death);
 }
 
+void Catp::Damage(int damage)
+{
+	m_hp = max(m_hp - damage, 0);
+
+	if (m_hp <= 0 ) {
+		//死亡処理
+		Death();
+	}
+
+}
+
+bool Catp::CheckCollisionEnemy(float _playerShotX, float _playerShotY, float _playerShotZ, SRect3D _playerShotRect)
+{
+	if (IsHitBox3D(_playerShotX, _playerShotY, _playerShotZ, m_pos.x, m_pos.y,
+		m_pos.z, _playerShotRect, m_rect))
+	{
+		//printf("毛虫にダメージ！\n");
+		//Damage(1);	//1は暫定値
+		Death();
+		return true;
+	}
+	return false;
+}
+
+void Catp::HitCheck(void)
+{
+	Player* ptask = (Player*)TaskManager::
+		Instance()->GetTask(CAST::PLAYER);
+	if (!ptask)return;
+
+	if (ptask->CheckCollisionPlayer(
+		m_pos.x, m_pos.y, m_pos.z, m_rect));
+
+
+}
+
 // 現在の状態を切り替え
 void Catp::ChangeState(EState state)
 {
@@ -78,7 +118,7 @@ void Catp::ChangeState(EState state)
 bool Catp::UpdateMove()
 {
 
-	m_pos.x -= MOVE_SPEED_X;
+	m_pos.x -= move_Speed_X;
 	mp_image->SetFlipH(false);
 
 	bool isMove = true;
@@ -122,9 +162,13 @@ void Catp::StateDeath()
 void Catp::Update()
 
 {
-	/*if (PUSH(CInput::eButton5))
+	/*
+	if (m_timer++ >= 1800)
 	{
+		m_timer = 0;
 		ChangeState(EState::Death);
+		//printf("毛虫消えたお\n");
+
 	}*/
 
 	// 状態に合わせて、更新処理を切り替える
@@ -138,15 +182,20 @@ void Catp::Update()
 	{
 	}
 
+	HitCheck();
+
 	// イメージに座標を設定して、アニメーションを更新
 	mp_image->SetPos(CalcScreenPos());
 	mp_image->UpdateAnimation();
+
+
 }
 
 // 描画処理
 void Catp::Render()
 {
-	mp_image->Draw();
 	RenderShadow();
+
+	mp_image->Draw();
 
 }

@@ -153,6 +153,16 @@ Task* TaskManager::GetTask(CAST _id, DWORD _number) {
 	return nullptr;
 }
 
+//指定したグループの(id)のタスク数を返す
+DWORD TaskManager::GetCount(CAST _id)
+{
+	DWORD count = 0;
+	for (auto task : m_taskList) {
+		if (task->m_id == _id) count++;
+	}
+	return count;
+}
+
 
 //リストに登録されているタスク
 void TaskManager::Update()
