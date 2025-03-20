@@ -51,6 +51,7 @@ private:
 		Move,	// ˆÚ“®
 		Death,	// €–S
 		Attack,	// UŒ‚
+		Jump,	// ’µ–ô
 
 		Num,
 	};
