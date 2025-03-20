@@ -42,7 +42,6 @@ private:
 
 	EState m_state;
 	int m_stateStep;
-	CAST m_id;
 
 	// アニメーションの種類
 	enum class EAnimType

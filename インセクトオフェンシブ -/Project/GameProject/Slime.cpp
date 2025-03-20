@@ -28,7 +28,7 @@
 
 // コンストラクタ
 Slime::Slime(int type, const CVector3D& pos)
-	: EnemyBase(pos)
+	: EnemyBase(pos,CAST::ENEMY)
 	, mp_image(nullptr)
 	, m_type(type)
 {

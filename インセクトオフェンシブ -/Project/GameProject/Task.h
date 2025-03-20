@@ -20,8 +20,10 @@ class Task
 	friend TaskManager;
 
 public :
+	Task();
+
 	//コンストラクタ
-	Task(int prio, int sortOrder);
+	Task(int prio, int sortOrder,CAST _id);
 	//デストラクタ
 	virtual ~Task();
 
@@ -50,13 +52,14 @@ public :
 	//優先度内の順番を取得
 	int GetSortOeder() const;
 
+	//グループ識別子(id)を取得
+	CAST GetId() const;
+
 	//更新
 	virtual void Update();
 	//描画
 	virtual void Render();
 
-
-	CAST m_id = CAST::NONE;	//グループ識別子
 
 private:
 	bool m_isEnable;	//有効フラグ
@@ -64,6 +67,7 @@ private:
 	bool m_isKill;		//削除フラグ
 	int m_prio;			//タスクの優先度
 	int m_sortOrder;	//同じ優先度内での順番
-	
+	CAST m_id = CAST::NONE;	//グループ識別子
+
 
 };

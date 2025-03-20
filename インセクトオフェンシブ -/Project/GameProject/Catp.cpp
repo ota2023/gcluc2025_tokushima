@@ -28,7 +28,7 @@
 
 // コンストラクタ
 Catp::Catp(int type, const CVector3D& pos)
-	: EnemyBase(pos)
+	: EnemyBase(pos,CAST::ENEMY)
 	, mp_image(nullptr)
 	, m_type(type)
 {
@@ -78,7 +78,7 @@ void Catp::ChangeState(EState state)
 bool Catp::UpdateMove()
 {
 
-	//m_pos.x -= MOVE_SPEED_X;
+	m_pos.x -= MOVE_SPEED_X;
 	mp_image->SetFlipH(false);
 
 	bool isMove = true;

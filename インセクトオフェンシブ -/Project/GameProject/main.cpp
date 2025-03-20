@@ -26,7 +26,7 @@ void MainLoop()
 	TaskManager::Instance()->Update();
 
 	// フィールド画像を描画
-	g_field->Draw();	//フィールドもタスク管理しよう（タスクにして）
+	//g_field->Draw();	//フィールドもタスク管理しよう（タスクにして）
 	g_field2->Draw();
 
 	//全てのタスクを描画
@@ -72,8 +72,8 @@ void Init()
 	//-----------------------------------------------------
 
 	// フィールドの画像を生成
-	g_field = CImage::CreateImage("壁＿仮データ.png");
-	g_field2 = CImage::CreateImage("床＿仮データ.png");
+	//g_field = CImage::CreateImage("壁＿本番データ.png");
+	g_field2 = CImage::CreateImage("床＿本番データ.png");
 
 	// プレイヤーを生成
 	g_player = new Player(

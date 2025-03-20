@@ -8,10 +8,10 @@
 #define MOVE_SPEED_Z 4.0f	// 奥方向の移動速度
 #define JUMP_SPEED 25.0f	// ジャンプ速度
 #define GRAVITY -1.0f		// 重力
-#define LEFT_UPPER_LIMIT 240.0f	//左移動制限(割合)
+#define LEFT_UPPER_LIMIT 0.0f	//左移動制限(割合)
 #define RIGHT_UPPER_LIMIT 3.0f	//右移動制限(割合)
 #define UPPER_LIMIT 5.0f	//上移動制限(割合)
-#define LOWER_LIMIT 1.0f	//下移動制限(割合)
+#define LOWER_LIMIT 3.0f	//下移動制限(割合)
 
 
 // プレイヤーのアニメーションデータの前宣言
@@ -61,13 +61,11 @@ TexAnimData Player::ANIM_DATA[(int)EAnimType::Num] =
 
 // コンストラクタ
 Player::Player(const CVector3D& pos)
-	: CharaBase(pos)
+	: CharaBase(pos,CAST::PLAYER)
 	, m_state(EState::Idle)
 	, m_stateStep(0)
 	, mp_image(nullptr)
-	, m_id(CAST::PLAYER)
 {
-	m_pos = m_pos;
 	m_hp = 100;
 
 	// プレイヤーの画像を読み込み
@@ -108,11 +106,13 @@ void Player::ChangeState(EState state)
 bool Player::UpdateMove()
 {
 	bool isMove = false;
+	m_pos.x -= 1.5f;
 	// 左キーを押している間
 	if (HOLD(CInput::eLeft))
 	{
 		// 左方向へ移動
-		m_pos.x = max(m_pos.x - MOVE_SPEED_X, LEFT_UPPER_LIMIT);
+		//m_pos.x -= MOVE_SPEED_X;
+		 m_pos.x = max(m_pos.x - MOVE_SPEED_X, LEFT_UPPER_LIMIT);
 		mp_image->SetFlipH(true);	//画像の向き
 		isMove = true;
 	}
@@ -120,7 +120,8 @@ bool Player::UpdateMove()
 	else if (HOLD(CInput::eRight))
 	{
 		// 右方向へ移動
-		m_pos.x = min(m_pos.x + MOVE_SPEED_X, SCREEN_WIDTH - CHIP_WIDTH / RIGHT_UPPER_LIMIT);
+		//m_pos.x += MOVE_SPEED_X;
+		 m_pos.x = min(m_pos.x + MOVE_SPEED_X, SCREEN_WIDTH - CHIP_WIDTH / RIGHT_UPPER_LIMIT);
 		mp_image->SetFlipH(false);	//画像の向き
 		isMove = true;
 	}
@@ -128,6 +129,7 @@ bool Player::UpdateMove()
 	if (HOLD(CInput::eUp))
 	{
 		// 奥方向へ移動
+		//m_pos.z -= MOVE_SPEED_Z;
 		m_pos.z = max(m_pos.z - MOVE_SPEED_Z, -SCREEN_HEIGHT / UPPER_LIMIT);
 		isMove = true;
 	}
@@ -135,6 +137,7 @@ bool Player::UpdateMove()
 	else if (HOLD(CInput::eDown))
 	{
 		// 手前方向へ移動
+		//m_pos.z += MOVE_SPEED_Z;
 		m_pos.z = min(m_pos.z + MOVE_SPEED_Z, SCREEN_HEIGHT / 2 - CHIP_HEIGHT / LOWER_LIMIT);
 		isMove = true;
 	}

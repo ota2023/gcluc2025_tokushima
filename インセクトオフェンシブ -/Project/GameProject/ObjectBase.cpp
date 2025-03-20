@@ -3,12 +3,12 @@
 
 // コンストラクタ
 ObjectBase::ObjectBase()
-	: ObjectBase(CVector3D::zero)
+	//: ObjectBase(CVector3D::zero)
 {
 }
 
-ObjectBase::ObjectBase(const CVector3D& pos)
-	: Task((int)ETaskPrio::Object,0)
+ObjectBase::ObjectBase(const CVector3D& pos,CAST _id)
+	: Task((int)ETaskPrio::Object,0,_id)
 	, m_pos(pos)
 	, m_isGrounded(true)
 	, mp_shadowImg(nullptr)
@@ -45,6 +45,8 @@ void ObjectBase::SetPos(const CVector3D& pos)
 CVector2D ObjectBase::CalcScreenPos(bool grounded) const
 {
 	CVector2D ret;
+	static CVector2D ScrollOffset(0.0f,0.0f);
+	//ScrollOffset.x += 0.5f;
 
 	// X座標はそのまま設定
 	ret.x = m_pos.x;
@@ -62,7 +64,7 @@ CVector2D ObjectBase::CalcScreenPos(bool grounded) const
 		ret.y = FIELD_CENTER_Z + m_pos.z;
 	}
 
-	return ret;
+	return ret /* - ScrollOffset*/;
 }
 
 // 影描画

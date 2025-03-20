@@ -31,10 +31,10 @@
 
 // コンストラクタ
 Bee::Bee(int type, const CVector3D& pos)
-	: EnemyBase(pos)
+	: EnemyBase(pos,CAST::ENEMY)
 	, mp_image(nullptr)
 	, m_type(type)
-	, m_id(CAST::ENEMY)
+	//, m_id(CAST::ENEMY)
 {
 	m_hp = 200;
 
@@ -81,9 +81,11 @@ void Bee::ChangeState(EState state)
 // 移動処理の更新
 bool Bee::UpdateMove()
 {
+	m_pos.x -= MOVE_SPEED_X;
+
 	Player* ptask = (Player*)TaskManager::
 			Instance()->GetTask(CAST::PLAYER);
-	//ptask->GetPlyPos();
+	ptask->GetPlyPos();
 
 
 	mp_image->SetFlipH(false);

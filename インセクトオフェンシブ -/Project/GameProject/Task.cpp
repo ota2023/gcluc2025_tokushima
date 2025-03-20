@@ -1,13 +1,18 @@
 #include "Task.h"
 #include "TaskManager.h"
 
+Task::Task()
+{
+}
+
 //コンストラクタ
-Task::Task(int prio, int sortOrder)
+Task::Task(int prio, int sortOrder,CAST _id)
 	:m_isEnable(true)
 	,m_isShow(true)
 	,m_isKill(false)
 	,m_prio(prio)
 	,m_sortOrder(sortOrder)
+	,m_id(_id)
 {
 	//TaskManagerのリストに自身を追加
 	TaskManager::Instance()->Add(this);
@@ -77,6 +82,11 @@ void Task::SetSortOeder(int order)
 int Task::GetSortOeder() const
 {
 	return m_sortOrder;
+}
+
+CAST Task::GetId() const
+{
+	return m_id;
 }
 
 //更新
