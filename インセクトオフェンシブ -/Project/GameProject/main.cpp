@@ -13,7 +13,7 @@ Catp* g_catp = nullptr;		//　ケムシのポインタ
 Bee* g_bee = nullptr;		//　ハチのポインタ
 
 CImage* g_field = nullptr;	// フィールド画像のポインタ
-CImage* g_field2 = nullptr;	//	フィールド画像２のポインタ
+
 
 void MainLoop()
 {
@@ -26,8 +26,7 @@ void MainLoop()
 	TaskManager::Instance()->Update();
 
 	// フィールド画像を描画
-	//g_field->Draw();	//フィールドもタスク管理しよう（タスクにして）
-	g_field2->Draw();
+	g_field->Draw();	//フィールドもタスク管理しよう（タスクにして）
 
 	//全てのタスクを描画
 	TaskManager::Instance()->Render();
@@ -72,8 +71,8 @@ void Init()
 	//-----------------------------------------------------
 
 	// フィールドの画像を生成
-	//g_field = CImage::CreateImage("壁＿本番データ.png");
-	g_field2 = CImage::CreateImage("背景まとめ.png");
+	g_field = CImage::CreateImage("背景まとめ.png");
+
 
 	// プレイヤーを生成
 	g_player = new Player(
